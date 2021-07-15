@@ -12,4 +12,7 @@
     <extensions defaultExtensionNs="Pythonid">
         <pyReferenceResolveProvider implementation="net.earthcomputer.jsmacrosindexing.ReferenceResolveProvider" />
     </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+<!--        <psi.referenceContributor implementation="net.earthcomputer.jsmacrosindexing.ReferenceContributor" />-->
+    </extensions>
 </idea-plugin>
