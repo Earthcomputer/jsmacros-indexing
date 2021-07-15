@@ -1,19 +1,15 @@
 <idea-plugin>
-    <id>com.github.earthcomputer.jsmacrosindexing</id>
-    <name>jsmacros-indexing</name>
-    <vendor>earthcomputer</vendor>
+    <id>net.earthcomputer.jsmacrosindexing</id>
+    <name>Jsmacros-Indexing</name>
+    <vendor>Earthcomputer</vendor>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
+    <depends>Pythonid</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.earthcomputer.jsmacrosindexing.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.earthcomputer.jsmacrosindexing.services.MyProjectService"/>
+    <extensions defaultExtensionNs="Pythonid">
+        <pyReferenceResolveProvider implementation="net.earthcomputer.jsmacrosindexing.ReferenceResolveProvider" />
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.earthcomputer.jsmacrosindexing.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
