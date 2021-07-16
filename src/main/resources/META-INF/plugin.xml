@@ -11,8 +11,9 @@
 
     <extensions defaultExtensionNs="Pythonid">
         <pyReferenceResolveProvider implementation="net.earthcomputer.jsmacrosindexing.ReferenceResolveProvider" />
+        <typeCheckerExtension implementation="net.earthcomputer.jsmacrosindexing.TypeCheckerFix" />
     </extensions>
     <extensions defaultExtensionNs="com.intellij">
-<!--        <psi.referenceContributor implementation="net.earthcomputer.jsmacrosindexing.ReferenceContributor" />-->
+<!--        <psi.referenceContributor language="Python" implementation="net.earthcomputer.jsmacrosindexing.ReferenceContributor" />-->
     </extensions>
 </idea-plugin>
