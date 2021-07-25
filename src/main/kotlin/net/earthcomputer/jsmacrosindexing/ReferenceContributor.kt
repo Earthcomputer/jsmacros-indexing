@@ -58,7 +58,7 @@ class ReferenceContributor : PsiReferenceContributor() {
                                 return@filter true
                             }
                             languages.initializers.filterIsInstance(PsiClassObjectAccessExpression::class.java).any { objectAccess ->
-                                val libClass = objectAccess.operand.innermostComponentReferenceElement?.resolve() as? PsiClass ?: return@filter false
+                                val libClass = (objectAccess.operand.type as? PsiClassType)?.resolve() ?: return@filter false
                                 InheritanceUtil.isInheritorOrSelf(libClass, pyLanguageClass, true)
                             }
                         }
