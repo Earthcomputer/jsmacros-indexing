@@ -12,6 +12,8 @@
     <extensions defaultExtensionNs="Pythonid">
         <pyReferenceResolveProvider implementation="net.earthcomputer.jsmacrosindexing.ReferenceResolveProvider" />
         <typeCheckerExtension implementation="net.earthcomputer.jsmacrosindexing.TypeCheckerFix" />
+        <importResolver implementation="net.earthcomputer.jsmacrosindexing.JavaImportFixResolver" />
+        <importResolver implementation="net.earthcomputer.jsmacrosindexing.PyImportByFileNameResolver" />
     </extensions>
     <extensions defaultExtensionNs="com.intellij">
 <!--        <psi.referenceContributor language="Python" implementation="net.earthcomputer.jsmacrosindexing.ReferenceContributor" />-->
